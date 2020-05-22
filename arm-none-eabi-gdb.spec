@@ -45,7 +45,7 @@ cd build
 CFLAGS="$RPM_OPT_FLAGS" ../gdb-%{version}/configure --prefix=%{_prefix} \
 	--libdir=%{_libdir} --mandir=%{_mandir} --infodir=%{_infodir} \
 	--datarootdir=%{gdb_datarootdir} --disable-rpath \
-	--target=%{target} --disable-nls --disable-werror --with-python --without-doc --with-xml --with-expat
+	--target=%{target} --disable-nls --disable-werror --with-python=/usr/bin/python2.7 --without-doc --with-xml --with-expat
 make %{?_smp_mflags}
 
 %install
